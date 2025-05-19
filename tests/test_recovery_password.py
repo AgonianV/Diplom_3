@@ -9,6 +9,7 @@ from conftest import driver_init
 @pytest.mark.usefixtures("driver_init")
 class TestPassRecovery:
 
+    @allure.title("Проверка перехода на страницу восстановления пароля по кнопке «Восстановить пароль»")
     def test_enter_in_pass_recovery_page(self):
         self.driver.get(login_page)
 
@@ -23,6 +24,7 @@ class TestPassRecovery:
 
         assert self.driver.current_url == forgot_password_page
 
+    @allure.title("Проверка ввода почты и клик по кнопке «Восстановить»")
     def test_set_email_with_restore(self):
         self.driver.get(forgot_password_page)
         recover = BasePageBurger(self.driver)
@@ -41,7 +43,7 @@ class TestPassRecovery:
 
         assert recover.return_recover_text() == "Пароль"
 
-
+    @allure.title("Проверка, что клик по кнопке показать/скрыть пароль делает поле активным — подсвечивает его")
     def test_show_password_in_recovery_page(self):
         self.driver.get(forgot_password_page)
         recover = BasePageBurger(self.driver)

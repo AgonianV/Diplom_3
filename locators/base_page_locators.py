@@ -27,3 +27,5 @@ recover_text = "input_type_password label"
 show_password_check = "input_status_active"
 restore_password_field = "[name = 'Введите новый пароль']"
 show_password = "input__icon svg"
+
+order_history = "//*[@href='/account/order-history']"
