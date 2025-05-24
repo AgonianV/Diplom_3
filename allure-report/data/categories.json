@@ -1,0 +1,117 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[name = 'name']\"}\n  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x00007FF65900CF65+75717]\n\tGetHandleVerifier [0x00007FF65900CFC0+75808]\n\t(No symbol) [0x00007FF658DD8F9A]\n\t(No symbol) [0x00007FF658E2F4C6]\n\t(No symbol) [0x00007FF658E2F77C]\n\t(No symbol) [0x00007FF658E82577]\n\t(No symbol) [0x00007FF658E573BF]\n\t(No symbol) [0x00007FF658E7F39C]\n\t(No symbol) [0x00007FF658E57153]\n\t(No symbol) [0x00007FF658E20421]\n\t(No symbol) [0x00007FF658E211B3]\n\tGetHandleVerifier [0x00007FF65930D74D+3223469]\n\tGetHandleVerifier [0x00007FF659307CF2+3200338]\n\tGetHandleVerifier [0x00007FF659325B23+3322755]\n\tGetHandleVerifier [0x00007FF659026A3A+180890]\n\tGetHandleVerifier [0x00007FF65902E13F+211359]\n\tGetHandleVerifier [0x00007FF6590152B4+109332]\n\tGetHandleVerifier [0x00007FF659015462+109762]\n\tGetHandleVerifier [0x00007FF658FFBA79+4825]\n\tBaseThreadInitThunk [0x00007FFAEF96E8D7+23]\n\tRtlUserThreadStart [0x00007FFAF129C5DC+44]",
+      "children" : [ {
+        "name" : "Проверка, что при создании нового заказа счётчик Выполнено за всё время увеличивается",
+        "uid" : "118e464e244b8433",
+        "parentUid" : "4ae6402f6c3b66a2a8787b4d65e023d7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747693999995,
+          "stop" : 1747694000205,
+          "duration" : 210
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Проверка, что при создании нового заказа счётчик Выполнено за сегодня увеличивается",
+        "uid" : "2a1aab428c7cb609",
+        "parentUid" : "4ae6402f6c3b66a2a8787b4d65e023d7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747694000390,
+          "stop" : 1747694000494,
+          "duration" : 104
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Проверка, что при создании нового заказа его номер появляется в разделе В работе",
+        "uid" : "4b84ff74cb25198e",
+        "parentUid" : "4ae6402f6c3b66a2a8787b4d65e023d7",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747694000535,
+          "stop" : 1747694000636,
+          "duration" : 101
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4ae6402f6c3b66a2a8787b4d65e023d7"
+    }, {
+      "name" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\nRemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:552:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16",
+      "children" : [ {
+        "name" : "Проверка, что клик по кнопке показать/скрыть пароль делает поле активным — подсвечивает его",
+        "uid" : "f48042e8d379ed27",
+        "parentUid" : "8d500b71c0dfb28efc08768ee95c572c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747694185909,
+          "stop" : 1747694196906,
+          "duration" : 10997
+        },
+        "flaky" : false,
+        "parameters" : [ "'firefox'" ]
+      } ],
+      "uid" : "8d500b71c0dfb28efc08768ee95c572c"
+    }, {
+      "name" : "selenium.common.exceptions.NoSuchWindowException: Message: Browsing context has been discarded\nStacktrace:\nRemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5\nNoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:747:5\nassert.that/<@chrome://remote/content/shared/webdriver/Assert.sys.mjs:559:13\nassert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4\nGeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.sys.mjs:1052:39\ndespatch@chrome://remote/content/marionette/server.sys.mjs:318:40\nexecute@chrome://remote/content/marionette/server.sys.mjs:289:16\nonPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20\nonPacket@chrome://remote/content/marionette/server.sys.mjs:263:9\n_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20",
+      "children" : [ {
+        "name" : "Проверка перехода по клику на «Личный кабинет»",
+        "uid" : "f6c7a7c94918453f",
+        "parentUid" : "acc1d2ef9659e90cb092de9ad7a350be",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747694218316,
+          "stop" : 1747694218319,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "parameters" : [ "'firefox'" ]
+      } ],
+      "uid" : "acc1d2ef9659e90cb092de9ad7a350be"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  }, {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert '0' == '2'\n  \n  - 2\n  + 0",
+      "children" : [ {
+        "name" : "Проверка, при добавлении ингредиента в заказ, увеличивается количество данного ингредиента",
+        "uid" : "93b5f428f8af23eb",
+        "parentUid" : "d36029ed79f99fef82c312fc589e56d8",
+        "status" : "failed",
+        "time" : {
+          "start" : 1747694102654,
+          "stop" : 1747694103902,
+          "duration" : 1248
+        },
+        "flaky" : false,
+        "parameters" : [ "'firefox'" ]
+      } ],
+      "uid" : "d36029ed79f99fef82c312fc589e56d8"
+    }, {
+      "name" : "AssertionError: assert False\n +  where False = is_displayed()\n +    where is_displayed = <selenium.webdriver.remote.webelement.WebElement (session=\"963c8ea54e0b7c845924be209a208594\", element=\"f.BB9CCB41B46677AC297A679679AEC5B4.d.FC71670FFC4D0913E87F26C5AFBA255D.e.62\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"963c8ea54e0b7c845924be209a208594\", element=\"f.BB9CCB41B46677AC297A679679AEC5B4.d.FC71670FFC4D0913E87F26C5AFBA255D.e.62\")> = check_order_popup()\n +        where check_order_popup = <pages.feed_page.FeedPage object at 0x0000021F5747A3D0>.check_order_popup",
+      "children" : [ {
+        "name" : "Проверка, что залогиненный пользователь может оформить заказ",
+        "uid" : "4657a8711b4acfac",
+        "parentUid" : "716aa717f0fdf4a03648e096c7aeecd3",
+        "status" : "failed",
+        "time" : {
+          "start" : 1747694107915,
+          "stop" : 1747694109185,
+          "duration" : 1270
+        },
+        "flaky" : false,
+        "parameters" : [ "'chrome'" ]
+      } ],
+      "uid" : "716aa717f0fdf4a03648e096c7aeecd3"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

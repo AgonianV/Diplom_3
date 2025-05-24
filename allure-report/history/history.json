@@ -1,0 +1,560 @@
+{
+  "2b028793c1219f3618b5d8c659e2a9ee" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4b84ff74cb25198e",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[name = 'name']\"}\n  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x00007FF65900CF65+75717]\n\tGetHandleVerifier [0x00007FF65900CFC0+75808]\n\t(No symbol) [0x00007FF658DD8F9A]\n\t(No symbol) [0x00007FF658E2F4C6]\n\t(No symbol) [0x00007FF658E2F77C]\n\t(No symbol) [0x00007FF658E82577]\n\t(No symbol) [0x00007FF658E573BF]\n\t(No symbol) [0x00007FF658E7F39C]\n\t(No symbol) [0x00007FF658E57153]\n\t(No symbol) [0x00007FF658E20421]\n\t(No symbol) [0x00007FF658E211B3]\n\tGetHandleVerifier [0x00007FF65930D74D+3223469]\n\tGetHandleVerifier [0x00007FF659307CF2+3200338]\n\tGetHandleVerifier [0x00007FF659325B23+3322755]\n\tGetHandleVerifier [0x00007FF659026A3A+180890]\n\tGetHandleVerifier [0x00007FF65902E13F+211359]\n\tGetHandleVerifier [0x00007FF6590152B4+109332]\n\tGetHandleVerifier [0x00007FF659015462+109762]\n\tGetHandleVerifier [0x00007FF658FFBA79+4825]\n\tBaseThreadInitThunk [0x00007FFAEF96E8D7+23]\n\tRtlUserThreadStart [0x00007FFAF129C5DC+44]",
+      "time" : {
+        "start" : 1747694000535,
+        "stop" : 1747694000636,
+        "duration" : 101
+      }
+    } ]
+  },
+  "b320c2db74b20a156a1fdc6d67e3effe" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bd5342593920cbfa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694090110,
+        "stop" : 1747694091173,
+        "duration" : 1063
+      }
+    } ]
+  },
+  "3a61b0209302d143818bff933b74f078" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9c28177cdb478c5a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694116473,
+        "stop" : 1747694117495,
+        "duration" : 1022
+      }
+    } ]
+  },
+  "37a3ede6a314f437d3a0c0f1e4a85e02" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "49d3f0500ab4b546",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694235506,
+        "stop" : 1747694236698,
+        "duration" : 1192
+      }
+    } ]
+  },
+  "f8457184e6c8056585b74b6f7e898474" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2b873e83de7587a7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694133540,
+        "stop" : 1747694134212,
+        "duration" : 672
+      }
+    } ]
+  },
+  "b63d3513570ad26dc3f1de35b01795cc" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "31fe078b942eb66e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747693989598,
+        "stop" : 1747693992566,
+        "duration" : 2968
+      }
+    } ]
+  },
+  "2e4b28266ea11d86233cf151501a9693" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "37bebf2cd7fc8e35",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694173293,
+        "stop" : 1747694174424,
+        "duration" : 1131
+      }
+    } ]
+  },
+  "d304c92f8f3d432c5c00c91339baa312" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2a0d290d70e28d31",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694259006,
+        "stop" : 1747694260816,
+        "duration" : 1810
+      }
+    } ]
+  },
+  "2bbd22165ac86a1ec14e3fb415534efd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2a1aab428c7cb609",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[name = 'name']\"}\n  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x00007FF65900CF65+75717]\n\tGetHandleVerifier [0x00007FF65900CFC0+75808]\n\t(No symbol) [0x00007FF658DD8F9A]\n\t(No symbol) [0x00007FF658E2F4C6]\n\t(No symbol) [0x00007FF658E2F77C]\n\t(No symbol) [0x00007FF658E82577]\n\t(No symbol) [0x00007FF658E573BF]\n\t(No symbol) [0x00007FF658E7F39C]\n\t(No symbol) [0x00007FF658E57153]\n\t(No symbol) [0x00007FF658E20421]\n\t(No symbol) [0x00007FF658E211B3]\n\tGetHandleVerifier [0x00007FF65930D74D+3223469]\n\tGetHandleVerifier [0x00007FF659307CF2+3200338]\n\tGetHandleVerifier [0x00007FF659325B23+3322755]\n\tGetHandleVerifier [0x00007FF659026A3A+180890]\n\tGetHandleVerifier [0x00007FF65902E13F+211359]\n\tGetHandleVerifier [0x00007FF6590152B4+109332]\n\tGetHandleVerifier [0x00007FF659015462+109762]\n\tGetHandleVerifier [0x00007FF658FFBA79+4825]\n\tBaseThreadInitThunk [0x00007FFAEF96E8D7+23]\n\tRtlUserThreadStart [0x00007FFAF129C5DC+44]",
+      "time" : {
+        "start" : 1747694000390,
+        "stop" : 1747694000494,
+        "duration" : 104
+      }
+    } ]
+  },
+  "dc97344d76655cbc1167ad77da106891" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "118e464e244b8433",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"[name = 'name']\"}\n  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x00007FF65900CF65+75717]\n\tGetHandleVerifier [0x00007FF65900CFC0+75808]\n\t(No symbol) [0x00007FF658DD8F9A]\n\t(No symbol) [0x00007FF658E2F4C6]\n\t(No symbol) [0x00007FF658E2F77C]\n\t(No symbol) [0x00007FF658E82577]\n\t(No symbol) [0x00007FF658E573BF]\n\t(No symbol) [0x00007FF658E7F39C]\n\t(No symbol) [0x00007FF658E57153]\n\t(No symbol) [0x00007FF658E20421]\n\t(No symbol) [0x00007FF658E211B3]\n\tGetHandleVerifier [0x00007FF65930D74D+3223469]\n\tGetHandleVerifier [0x00007FF659307CF2+3200338]\n\tGetHandleVerifier [0x00007FF659325B23+3322755]\n\tGetHandleVerifier [0x00007FF659026A3A+180890]\n\tGetHandleVerifier [0x00007FF65902E13F+211359]\n\tGetHandleVerifier [0x00007FF6590152B4+109332]\n\tGetHandleVerifier [0x00007FF659015462+109762]\n\tGetHandleVerifier [0x00007FF658FFBA79+4825]\n\tBaseThreadInitThunk [0x00007FFAEF96E8D7+23]\n\tRtlUserThreadStart [0x00007FFAF129C5DC+44]",
+      "time" : {
+        "start" : 1747693999995,
+        "stop" : 1747694000205,
+        "duration" : 210
+      }
+    } ]
+  },
+  "d95281b5d1cf0cabdfb2a3b6478c5dcc" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "96b2c384628ba08c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694244869,
+        "stop" : 1747694247591,
+        "duration" : 2722
+      }
+    } ]
+  },
+  "189e63a83591a9711acc8da0a8433d74" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "8a7a555056e072b1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694068024,
+        "stop" : 1747694069170,
+        "duration" : 1146
+      }
+    } ]
+  },
+  "3ba85e9e00e1d741661b5f6cee4eeba0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "cd143406f108e44a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694046958,
+        "stop" : 1747694047519,
+        "duration" : 561
+      }
+    } ]
+  },
+  "d32d34028b0d3f8f3599af0190ed7343" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b7552e1726eaa759",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747693992569,
+        "stop" : 1747693999992,
+        "duration" : 7423
+      }
+    } ]
+  },
+  "f45a73158d2d92d660dca3c53c900120" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f48042e8d379ed27",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message: \nStacktrace:\nRemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:552:5\ndom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16",
+      "time" : {
+        "start" : 1747694185909,
+        "stop" : 1747694196906,
+        "duration" : 10997
+      }
+    } ]
+  },
+  "aac7b01172d59b017fe3e222d62e4311" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "385f3890a1381d99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694025804,
+        "stop" : 1747694026301,
+        "duration" : 497
+      }
+    } ]
+  },
+  "2e56e64de492effc3a7d7aa8707cfd25" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f6c7a7c94918453f",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.NoSuchWindowException: Message: Browsing context has been discarded\nStacktrace:\nRemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:199:5\nNoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:747:5\nassert.that/<@chrome://remote/content/shared/webdriver/Assert.sys.mjs:559:13\nassert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4\nGeckoDriver.prototype.navigateTo@chrome://remote/content/marionette/driver.sys.mjs:1052:39\ndespatch@chrome://remote/content/marionette/server.sys.mjs:318:40\nexecute@chrome://remote/content/marionette/server.sys.mjs:289:16\nonPacket/<@chrome://remote/content/marionette/server.sys.mjs:262:20\nonPacket@chrome://remote/content/marionette/server.sys.mjs:263:9\n_onJSONObjectReady/<@chrome://remote/content/marionette/transport.sys.mjs:494:20",
+      "time" : {
+        "start" : 1747694218316,
+        "stop" : 1747694218319,
+        "duration" : 3
+      }
+    } ]
+  },
+  "57ccf4fe308d7f254c210d9c68e62560" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "54f90ab78e86e2d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694037868,
+        "stop" : 1747694038882,
+        "duration" : 1014
+      }
+    } ]
+  },
+  "1590435a5a55530aa95d328b8667b3ee" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f650b4cf4a3e5a5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694059088,
+        "stop" : 1747694059935,
+        "duration" : 847
+      }
+    } ]
+  },
+  "3d7c9bd0424340493ecdaeea21967d0c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "153e4a41701fcb0f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694004171,
+        "stop" : 1747694005014,
+        "duration" : 843
+      }
+    } ]
+  },
+  "bf7469a0d4370ee8d6b5490307f125ae" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d7935d86e3e4032d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694121595,
+        "stop" : 1747694122092,
+        "duration" : 497
+      }
+    } ]
+  },
+  "98f9d1fbb65556545b4e6c1f1105a5c1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ddfb8f1bedaaaa63",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694016658,
+        "stop" : 1747694017759,
+        "duration" : 1101
+      }
+    } ]
+  },
+  "b4cb26b71012fcb0879f03e6482e465e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1db63d59aac4b5d8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694200800,
+        "stop" : 1747694202504,
+        "duration" : 1704
+      }
+    } ]
+  },
+  "6ace6342729b8a801caea40de35f9d31" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "80ae5d90936fc187",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694142234,
+        "stop" : 1747694143937,
+        "duration" : 1703
+      }
+    } ]
+  },
+  "09e9252ca765d050d3d6b62c5272d6a1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "480b61fa7576dc91",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694080536,
+        "stop" : 1747694082106,
+        "duration" : 1570
+      }
+    } ]
+  },
+  "4e774eb54d9ecdc3f5b87a598c6fd15c" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4657a8711b4acfac",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert False\n +  where False = is_displayed()\n +    where is_displayed = <selenium.webdriver.remote.webelement.WebElement (session=\"963c8ea54e0b7c845924be209a208594\", element=\"f.BB9CCB41B46677AC297A679679AEC5B4.d.FC71670FFC4D0913E87F26C5AFBA255D.e.62\")>.is_displayed\n +      where <selenium.webdriver.remote.webelement.WebElement (session=\"963c8ea54e0b7c845924be209a208594\", element=\"f.BB9CCB41B46677AC297A679679AEC5B4.d.FC71670FFC4D0913E87F26C5AFBA255D.e.62\")> = check_order_popup()\n +        where check_order_popup = <pages.feed_page.FeedPage object at 0x0000021F5747A3D0>.check_order_popup",
+      "time" : {
+        "start" : 1747694107915,
+        "stop" : 1747694109185,
+        "duration" : 1270
+      }
+    } ]
+  },
+  "ecf2d424c60211de3ef5538af24ac3ba" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ed8abb522eb93c93",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694222276,
+        "stop" : 1747694224075,
+        "duration" : 1799
+      }
+    } ]
+  },
+  "1a3eb44f3672b7bbbb8a4e60e026d35f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f9949e0c5486871e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747694155455,
+        "stop" : 1747694157102,
+        "duration" : 1647
+      }
+    } ]
+  },
+  "8ab41b81348e34736a9ea83c977da9b8" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "93b5f428f8af23eb",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '0' == '2'\n  \n  - 2\n  + 0",
+      "time" : {
+        "start" : 1747694102654,
+        "stop" : 1747694103902,
+        "duration" : 1248
+      }
+    } ]
+  }
+}
