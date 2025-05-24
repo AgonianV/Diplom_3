@@ -1,140 +1,94 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from locators.base_page_locators import *
 import allure
-from urls import *
+from selenium.webdriver import ActionChains
 
 
 
 class BasePageBurger:
-    enter_button = [By.CLASS_NAME, login_button]
-    email_field = [By.CSS_SELECTOR, email]
-    password_field = [By.CSS_SELECTOR, password]
-    login_in_recovery_page = [By.XPATH, login_button_registration_page]
-    recovery_button = [By.XPATH, recovery_password_button]
-    firefox_modal_wait = [By.CLASS_NAME, firefox_modal]
-    restore_button =  [By.CLASS_NAME, restore]
-    recover_password_text = [By.CLASS_NAME, recover_text]
-    show_password_button = [By.CLASS_NAME, show_password]
-    show_password_active = [By.CLASS_NAME, show_password_check]
-    password_field_restore_page = [By.CSS_SELECTOR, restore_password_field]
-    personal_account_button = [By.XPATH, personal_account]
-    costructor_button = [By.XPATH, costructor]
-    lenta_button = [By.XPATH, lenta]
-    order_hystory_button = [By.XPATH, order_history]
 
-    @allure.step('Открываем браузер Chrome')
-    def __init__(self,driver):
+    def __init__(self, driver, wait_time=10):
         self.driver = driver
+        self.wait_time = wait_time
 
-    @allure.step('нажимаем История Заказов')
-    def click_on_order_hystory(self):
-        self.driver.find_element(*self.order_hystory_button).click()
+    @allure.step('Открытие страницы')
+    def open_page(self, url):
+        self.driver.get(url)
 
-    @allure.step('Ожидаем загрузки страницы Лента заказов')
-    def wait_for_load_feed_page(self):  # Ожидаем пока главная страница не прогрузится
-        WebDriverWait(self.driver, 10).until(expected_conditions.url_to_be((feed_page)))
+    @allure.step('Ожидаем пока элемент не станет кликабельным')
+    def wait_element_for_clickable(self, element):
+        return WebDriverWait(self.driver, self.wait_time).until(EC.element_to_be_clickable(element))
 
-    @allure.step('нажимаем Лента Заказов')
-    def click_on_lenta(self):
-        self.driver.find_element(*self.lenta_button).click()
+    @allure.title("Ожидаем загрузки заказа в разделе В работе")
+    def wait_order_in_work(self, element):
+        return WebDriverWait(self.driver, 10).until_not(
+            lambda d: d.find_element(*element).text.strip() == "Все текущие заказы готовы!"
+        )
+    @allure.step('Ожидаем появления элемента')
+    def wait_visibility_of_element(self, element):
+        return WebDriverWait(self.driver, self.wait_time).until(EC.visibility_of_element_located(element))
 
-    @allure.step('нажимаем Конструктор')
-    def click_on_costructor(self):
-        self.driver.find_element(*self.costructor_button).click()
+    @allure.step('Ожидаем появления заказа')
+    def wait_for_load_orders(self, elements,order_number):
+        element = [By.XPATH, f"{elements}//p[contains(text(), '{order_number}')]"]
+        return WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(element))
 
-    @allure.step('нажимаем Личный кабинет')
-    def click_on_personal_account_button(self):
-        self.driver.find_element(*self.personal_account_button).click()
-
-    @allure.step('Ищем пароль по поле ввода')
-    def find_password_field_restore_page(self):
-        element = self.driver.find_element(*self.password_field_restore_page)
-        value = element.get_attribute("value")
-        return value
-
-    @allure.step('нажимаем на показать пароль')
-    def click_show_password_restore_page(self):
-        self.driver.find_element(*self.show_password_button).click()
-
-    @allure.step('Вводим пароль')
-    def set_password_restore_page(self):
-        self.driver.find_element(*self.password_field_restore_page).send_keys("555999")
-
-    @allure.step('Получаем пароль из поля ввода')
-    def return_recover_text(self):
-        element = self.driver.find_element(*self.recover_password_text)
+    @allure.step('Поиск заказа пользователя')
+    def find_orders(self,elements,order_number,):
+        element = [By.XPATH, f"{elements}//p[contains(text(), '{order_number}')]"]
+        element = self.driver.find_element(*element)
         return element.text
 
-    @allure.step('Нажатие по кнопке Восстановить пароль')
-    def click_restore_button(self):  # Нажатие по кнопке "Восстановить пароль"
-        self.driver.find_element(*self.restore_button).click()
-
-    @allure.step('Ожидаем загрузки элементов на странице')
-    def wait_for_load_element(self, element):
-        WebDriverWait(self.driver, 10).until(expected_conditions.element_to_be_clickable(element))
-
-    @allure.step('Ожидаем закрытия элементов на странице')
-    def wait_for_close_element(self,element):
-        WebDriverWait(self.driver, 5).until(expected_conditions.invisibility_of_element_located(element))
-
-    @allure.step('Нажатие по кнопку Восстановить пароль')
-    def click_recovery_password_button(self): # Нажатие по кнопке "Восстановить пароль"
-        self.driver.find_element(*self.recovery_button).click()
-
-    @allure.step('Ожидаем зугрузки страницы История заказов')
-    def wait_for_load_order_history_page(self):   # Ожидаем пока главная страница не прогрузится
-        WebDriverWait(self.driver, 10).until(expected_conditions.url_to_be((order_story_page)))
-
-    @allure.step('Ожидаем зугрузки главной страницы')
-    def wait_for_load_main_page(self):   # Ожидаем пока главная страница не прогрузится
-        WebDriverWait(self.driver, 10).until(expected_conditions.url_to_be((main_page)))
-
-    @allure.step('Ожидаем зугрузки страницы Личный кабинет')
-    def wait_for_load_profile_page(self):   # Ожидаем пока главная страница не прогрузится
-        WebDriverWait(self.driver, 10).until(expected_conditions.url_to_be((profile_page)))
-
-    @allure.step('Ожидаем зугрузки страницы Восстановления пароля')
-    def wait_for_load_password_recovery_page(self):   # Ожидаем пока главная страница не прогрузится
-        WebDriverWait(self.driver, 10).until(expected_conditions.url_to_be((forgot_password_page)))
-
-    @allure.step('нажатие по кнопку Войти в аккаунт')
-    def click_login_button(self):    # Нажатие по кнопке "Войти в аккаунт"
-        self.driver.find_element(*self.enter_button).click()
-
-    @allure.step('Ожидаем пока  страница авторизации не прогрузится')
-    def wait_for_load_login_page(self):    # Ожидаем пока  страница авторизации не прогрузится
-        WebDriverWait(self.driver, 10).until(expected_conditions.url_to_be((login_page)))
-
-    @allure.step('Заполнение поля Email')
-    def set_email_field(self):   # Заполнение поля Email на странице входа
-            self.driver.find_element(*self.email_field).send_keys("Denis_kvartych_15_333@yandex.ru")
-
-    @allure.step('Заполнение поля пароль')
-    def set_password_field(self):  # Заполнение поля Email на странице входа
-        self.driver.find_element(*self.password_field).send_keys("555999")
-
-    @allure.step('Ожидаем пока  страница восстановления пароля не прогрузится')
-    def wait_for_load_password_recovery_page(self):    # Ожидаем пока  страница воссатановления пароля не прогрузится
-        WebDriverWait(self.driver, 10).until(expected_conditions.url_to_be((forgot_password_page)))
-
-    @allure.step('Нажатие по кнопке Войти на странице восстановления пароля')
-    def click_login_password_recovery_page(self):    # Нажатие по кнопке "Войти" на странице восстановления пароля
-        self.driver.find_element(*self.login_in_recovery_page).click()
+    @allure.step('Ожидаем пока элемент пропадет')
+    def wait_unvisibility_of_element(self, element):
+        return WebDriverWait(self.driver, self.wait_time).until(EC.invisibility_of_element_located(element))
 
 
-    def entrance_in_personal_account(self):
-        self.wait_for_load_login_page()
-        self.driver.execute_script("""
-                  let overlays = document.querySelectorAll('.Modal_modal_overlay__x2ZCr');
-                  overlays.forEach(el => el.remove());
-                """)
-        self.set_email_field()
-        self.set_password_field()
-        self.click_login_button()
-        self.wait_for_load_main_page()
-        self.click_on_personal_account_button()
-        self.wait_for_load_profile_page()
+    @allure.step('жидаем пока загрузится страница')
+    def wait_for_load_page(self, url):
+        return WebDriverWait(self.driver, self.wait_time).until(EC.url_to_be(url))
+
+    @allure.step('Получаем текст из элемента')
+    def get_element_from_text(self, element):
+        element = self.driver.find_element(*element)
+        return element.text
+
+    @allure.step('Находим элемент')
+    def get_element(self,element):
+        return self.driver.find_element(*element)
+
+    @allure.step('Ожидаем пока определится номер заказа')
+    def wait_for_order_number(self, element):
+        WebDriverWait(self.driver, 10).until_not(
+            lambda d: d.find_element(*element).text.strip() == "9999"
+        )
+    @allure.step('Заполняем поле')
+    def set_field(self, element, text):
+        self.driver.find_element(*element).send_keys(text)
+
+    @allure.step('Нажимаем на элемент')
+    def click_on_element(self, element):
+        self.driver.find_element(*element).click()
+
+    @allure.step('Получаем атрибут элемента')
+    def get_field_attribute(self, element, attribute):
+        return self.driver.find_element(*element).get_attribute(attribute)
+
+    @allure.step('Получаем нынешний адрес сайта')
+    def get_current_url(self):
+        return self.driver.current_url
+
+    @allure.title("Драг-н-дроп ингредиента в корзину")
+    def drug_and_drop_ingredients(self, ingredient_main_page, burger_bucket):
+        ingredient = self.driver.find_element(*ingredient_main_page)
+        busket = self.driver.find_element(*burger_bucket)
+        actions = ActionChains(self.driver)
+        actions.drag_and_drop(ingredient, busket).perform()
+
+    @allure.step('Убираем оверлей')
+    def put_away_overlay(self, element):
+        self.driver.execute_script(
+            f"let overlays = document.querySelectorAll('{element}'); overlays.forEach(el => el.remove());")
 
 

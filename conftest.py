@@ -1,14 +1,27 @@
 import pytest
-from webdriver_factory import WebdriverFactory
+from pages.login_page import LoginPage
+from urls import *
+from selenium import webdriver
 
-@pytest.fixture(params=["chrome", "firefox"], scope="function")  # ❗ scope="function для атомарности проверок"
+
+
+
+@pytest.fixture(params=['chrome', 'firefox'])
 def driver_init(request):
-    browser = request.param
-    driver = WebdriverFactory.getWebdriver(browser)
-    if driver is None:
-        raise RuntimeError(f"Driver could not be initialized for browser: {browser}")
+    browser = None
 
-    request.cls.driver = driver
-    yield
-    driver.quit()
+    if request.param == 'chrome':
+        browser = webdriver.Chrome()
+    elif request.param == 'firefox':
+        browser = webdriver.Firefox()
 
+
+    yield browser
+    browser.quit()
+
+
+@pytest.fixture(scope='function')
+def login(driver_init):
+    user = LoginPage(driver_init)
+    user.open_page(login_page)
+    user.login_user()

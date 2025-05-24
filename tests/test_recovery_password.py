@@ -1,64 +1,52 @@
 from selenium import webdriver
-from pages.base_page import BasePageBurger
+from pages.recovery_password_page import RecoveryPasswordPage
 from urls import *
 import pytest
 import allure
 from conftest import driver_init
 
 
-@pytest.mark.usefixtures("driver_init")
+
 class TestPassRecovery:
 
     @allure.title("Проверка перехода на страницу восстановления пароля по кнопке «Восстановить пароль»")
-    def test_enter_in_pass_recovery_page(self):
-        self.driver.get(login_page)
-
-        recover = BasePageBurger(self.driver)
+    def test_enter_in_pass_recovery_page(self, driver_init):
+        recover = RecoveryPasswordPage(driver_init)
+        recover.open_page(login_page)
         recover.wait_for_load_login_page()
-        self.driver.execute_script("""
-          let overlays = document.querySelectorAll('.Modal_modal_overlay__x2ZCr');
-          overlays.forEach(el => el.remove());
-        """)
+        recover.put_away_overlay_x2ZCr()
         recover.click_recovery_password_button()
         recover.wait_for_load_password_recovery_page()
 
-        assert self.driver.current_url == forgot_password_page
+        assert recover.get_current_url() == forgot_password_page
 
     @allure.title("Проверка ввода почты и клик по кнопке «Восстановить»")
-    def test_set_email_with_restore(self):
-        self.driver.get(forgot_password_page)
-        recover = BasePageBurger(self.driver)
+    def test_set_email_with_restore(self, driver_init):
+        recover = RecoveryPasswordPage(driver_init)
+        recover.open_page(forgot_password_page)
         recover.wait_for_load_password_recovery_page()
         recover.set_email_field()
-        self.driver.execute_script("""
-                  let overlays = document.querySelectorAll('.Modal_modal_overlay__x2ZCr');
-                  overlays.forEach(el => el.remove());
-                """)
-        self.driver.execute_script("""
-                          let overlays = document.querySelectorAll('.Modal_modal__loading__3534A');
-                          overlays.forEach(el => el.remove());
-                        """)
+
+        recover.put_away_overlay_x2ZCr()
+        recover.put_away_overlay_3534A()
+
         recover.click_restore_button()
-        recover.wait_for_load_element(recover.recover_password_text)
+        recover.wait_for_load_recovery_button()
 
         assert recover.return_recover_text() == "Пароль"
 
     @allure.title("Проверка, что клик по кнопке показать/скрыть пароль делает поле активным — подсвечивает его")
-    def test_show_password_in_recovery_page(self):
-        self.driver.get(forgot_password_page)
-        recover = BasePageBurger(self.driver)
+    def test_show_password_in_recovery_page(self, driver_init):
+        recover = RecoveryPasswordPage(driver_init)
+        recover.open_page(forgot_password_page)
         recover.wait_for_load_password_recovery_page()
         recover.set_email_field()
-        self.driver.execute_script("""
-                  let overlays = document.querySelectorAll('.Modal_modal_overlay__x2ZCr');
-                  overlays.forEach(el => el.remove());
-                """)
-        self.driver.execute_script("""
-                          let overlays = document.querySelectorAll('.Modal_modal__loading__3534A');
-                          overlays.forEach(el => el.remove());
-                        """)
+
+        recover.put_away_overlay_x2ZCr()
+        recover.put_away_overlay_3534A()
+
         recover.click_restore_button()
-        recover.wait_for_load_element(recover.recover_password_text)
+        recover.wait_for_load_recovery_button()
 
         recover.set_password_restore_page()
         recover.click_show_password_restore_page()
